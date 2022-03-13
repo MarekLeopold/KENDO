@@ -1,16 +1,18 @@
 ﻿using System;
+using System.Xml.Serialization;
 
 public class Zapasnik
 {
-	private int ID;
-	private string jmeno;
-	private string prijmeni;
-	private byte vek;
-	private byte uroven; // 10kju –> 1 kju -> 1 dan -> 10 dan // 20 urovni (0-19)
+	public int ID { get; set; }
+	public string jmeno { get; set; }
+	public string prijmeni { get; set; }
+	public byte vek { get; set; }
+	public byte uroven { get; set; } // 10kju –> 1 kju -> 1 dan -> 10 dan // 20 urovni (0-19)
 
 
-	public Zapasnik(string jmeno, string prijmeni, byte vek, byte uroven) // rucni vlozeni zapasnika
+	public Zapasnik(int ID, string jmeno, string prijmeni, byte vek, byte uroven) // rucni vlozeni zapasnika
 	{
+		this.ID = ID;
 		this.jmeno = jmeno;
 		this.prijmeni = prijmeni;
 		this.vek = vek;
@@ -18,8 +20,8 @@ public class Zapasnik
 		//save
 	}
 
-	public Zapasnik(int ID) // nacteni z DB
-	{
-		// load
-	}
+	public Zapasnik()
+    {
+
+    }
 }
