@@ -17,7 +17,7 @@ namespace KENDO
     public partial class Form1 : Form
     {
         static string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/KENDO/"; // Cesta do pracovního adresáře
-        List<Zapasnik> zapasnici = new List<Zapasnik>();
+        public List<Zapasnik> zapasnici = new List<Zapasnik>();
 
         public Form1()
         {
@@ -25,6 +25,8 @@ namespace KENDO
             Uloziste();
             NacistZapasniky();
             //UlozitZapasniky();
+
+            Zobrazovac("SeznamZapasniku");
         }
 
 
@@ -76,6 +78,23 @@ namespace KENDO
         {
             switch (zobrazeni)
             {
+                case "SeznamZapasniku":
+                    if (!display.Contains(SeznamZapasniku.Instance))
+                    {
+                        display.Controls.Add(SeznamZapasniku.Instance);
+                        SeznamZapasniku.Instance.Dock = DockStyle.Fill;
+                        SeznamZapasniku.Instance.BringToFront();
+                        SeznamZapasniku.Instance.setParent(this);
+                        SeznamZapasniku.Instance.nastavVychozi();
+                    }
+                    else
+                    {
+                        SeznamZapasniku.Instance.BringToFront();
+                    }
+
+                    SeznamZapasniku.Instance.setFocus();
+                    break;
+
                 case "EditovatZapasnika":
                     if (!display.Contains(EditovatZapasnika.Instance))
                     {

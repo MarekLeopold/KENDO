@@ -61,6 +61,12 @@
     <Compile Include="EditovatZapasnika.Designer.cs">
       <DependentUpon>EditovatZapasnika.cs</DependentUpon>
     </Compile>
+    <Compile Include="SeznamZapasniku.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SeznamZapasniku.Designer.cs">
+      <DependentUpon>SeznamZapasniku.cs</DependentUpon>
+    </Compile>
     <Compile Include="Zapasnik.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -76,6 +82,9 @@
     </Compile>
     <EmbeddedResource Include="EditovatZapasnika.resx">
       <DependentUpon>EditovatZapasnika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeznamZapasniku.resx">
+      <DependentUpon>SeznamZapasniku.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
