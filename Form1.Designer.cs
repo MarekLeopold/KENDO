@@ -48,7 +48,7 @@ namespace KENDO
             this.Controls.Add(this.display);
             this.MinimumSize = new System.Drawing.Size(900, 500);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "KENDÓ";
             this.ResumeLayout(false);
 
         }

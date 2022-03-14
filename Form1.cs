@@ -24,7 +24,6 @@ namespace KENDO
             InitializeComponent();
             Uloziste();
             NacistZapasniky();
-            //UlozitZapasniky();
 
             Zobrazovac("SeznamZapasniku");
         }
@@ -65,6 +64,10 @@ namespace KENDO
                     }
                 }
                 else throw new FileNotFoundException("Soubor nebyl nalezen");
+                for(int i = 0; i < zapasnici.Count; i++)
+                {
+                    zapasnici[i].ucastnikTurnaje = 0;
+                }
             }
             catch (Exception ex)
             {

@@ -38,20 +38,21 @@
             this.infoLabelVek = new System.Windows.Forms.Label();
             this.infoLabelUroven = new System.Windows.Forms.Label();
             this.uroven = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.ulozit = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.Stornovat = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // infoLabel1
             // 
             this.infoLabel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.infoLabel1.AutoSize = true;
             this.infoLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.infoLabel1.Location = new System.Drawing.Point(152, 13);
+            this.infoLabel1.Location = new System.Drawing.Point(3, 13);
             this.infoLabel1.Name = "infoLabel1";
-            this.infoLabel1.Size = new System.Drawing.Size(194, 25);
+            this.infoLabel1.Size = new System.Drawing.Size(494, 25);
             this.infoLabel1.TabIndex = 0;
             this.infoLabel1.Text = "Editovat zápasníka";
+            this.infoLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // jmeno
             // 
@@ -159,28 +160,41 @@
             this.uroven.Size = new System.Drawing.Size(121, 28);
             this.uroven.TabIndex = 8;
             // 
-            // button1
+            // ulozit
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button1.Location = new System.Drawing.Point(180, 200);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(86, 28);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Uložit";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.ulozit.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ulozit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ulozit.Location = new System.Drawing.Point(289, 200);
+            this.ulozit.Name = "ulozit";
+            this.ulozit.Size = new System.Drawing.Size(100, 28);
+            this.ulozit.TabIndex = 9;
+            this.ulozit.Text = "Uložit";
+            this.ulozit.UseVisualStyleBackColor = true;
+            this.ulozit.Click += new System.EventHandler(this.ulozit_Click);
             // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // Stornovat
+            // 
+            this.Stornovat.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Stornovat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Stornovat.Location = new System.Drawing.Point(180, 200);
+            this.Stornovat.Name = "Stornovat";
+            this.Stornovat.Size = new System.Drawing.Size(100, 28);
+            this.Stornovat.TabIndex = 10;
+            this.Stornovat.Text = "Stornovat";
+            this.Stornovat.UseVisualStyleBackColor = true;
+            this.Stornovat.Click += new System.EventHandler(this.Stornovat_Click);
+            // 
             // EditovatZapasnika
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Stornovat);
+            this.Controls.Add(this.ulozit);
             this.Controls.Add(this.uroven);
             this.Controls.Add(this.infoLabelUroven);
             this.Controls.Add(this.infoLabelVek);
@@ -208,7 +222,8 @@
         private System.Windows.Forms.Label infoLabelVek;
         private System.Windows.Forms.Label infoLabelUroven;
         private System.Windows.Forms.ComboBox uroven;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button ulozit;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.Button Stornovat;
     }
 }

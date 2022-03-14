@@ -9,6 +9,8 @@ public class Zapasnik
 	public byte vek { get; set; }
 	public byte uroven { get; set; } // 10kju –> 1 kju -> 1 dan -> 10 dan // 20 urovni (0-19)
 
+	public byte ucastnikTurnaje { get; set; }
+
 
 	public Zapasnik(int ID, string jmeno, string prijmeni, byte vek, byte uroven) // rucni vlozeni zapasnika
 	{
@@ -17,7 +19,7 @@ public class Zapasnik
 		this.prijmeni = prijmeni;
 		this.vek = vek;
 		this.uroven = uroven;
-		//save
+		this.ucastnikTurnaje = 0;
 	}
 
 	public Zapasnik()
