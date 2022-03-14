@@ -11,6 +11,8 @@ namespace KENDO
         private static EditovatZapasnika _instance;
         private Form1 _parent = null;
 
+        int ID;
+
         public static EditovatZapasnika Instance
         {
             get
@@ -34,6 +36,7 @@ namespace KENDO
         {
             InitializeComponent();
             uroven.SelectedIndex = 0;
+            ID = 0;
         }
 
         private void vek_KeyPress(object sender, KeyPressEventArgs e)
@@ -44,7 +47,7 @@ namespace KENDO
             }
         }
 
-        private void button1_Click(object sender, System.EventArgs e)
+        private void ulozit_Click(object sender, System.EventArgs e)
         {
             if(jmeno.Text == "")
             {
@@ -64,6 +67,7 @@ namespace KENDO
             }
             else
             {
+                if(ID == 0) { 
                 int newID = 1;
                 if(_parent.zapasnici.Count > 0)
                 {
@@ -77,9 +81,70 @@ namespace KENDO
                 vek.Text = "";
                 uroven.SelectedIndex = 0;
 
+
+                _parent.Zobrazovac("SeznamZapasniku");
+                SeznamZapasniku.Instance.vykreslitGrid();
                 MessageBox.Show("Zápasník uložen", "Potvrzení", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+                else
+                {
+                    for (int i = 0; i < _parent.zapasnici.Count; i++)
+                    {
+                        if (_parent.zapasnici[i].ID == ID)
+                        {
+                            _parent.zapasnici[i].jmeno = jmeno.Text;
+                            _parent.zapasnici[i].prijmeni = prijmeni.Text;
+                            _parent.zapasnici[i].vek = Convert.ToByte(vek.Text);
+                            _parent.zapasnici[i].uroven = Convert.ToByte(uroven.SelectedIndex);
+                            break;
+                        }
+                    }
+                    _parent.UlozitZapasniky();
+                    _parent.Zobrazovac("SeznamZapasniku");
+                    SeznamZapasniku.Instance.vykreslitGrid();
+                    MessageBox.Show("Zápasník uložen", "Potvrzení", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
             }
 
+        }
+
+        public void clear()
+        {
+            jmeno.Text = "";
+            prijmeni.Text = "";
+            vek.Text = "";
+            uroven.SelectedIndex = 0;
+            ID = 0;
+        }
+
+        public void nastavitLabel(string hodnota)
+        {
+            infoLabel1.Text = hodnota;
+        }
+
+        public void nastavitHodnoty(int ID)
+        {
+            for(int i = 0; i < _parent.zapasnici.Count; i++)
+            {
+                if(_parent.zapasnici[i].ID == ID)
+                {
+                    this.ID = ID;
+                    jmeno.Text = _parent.zapasnici[i].jmeno;
+                    prijmeni.Text = _parent.zapasnici[i].prijmeni;
+                    vek.Text = Convert.ToString(_parent.zapasnici[i].vek);
+                    uroven.SelectedIndex = _parent.zapasnici[i].uroven;
+                    break;
+                }
+            }
+        }
+
+        private void Stornovat_Click(object sender, EventArgs e)
+        {
+            clear();
+            _parent.Zobrazovac("SeznamZapasniku");
+            SeznamZapasniku.Instance.vykreslitGrid();
         }
     }
 }
