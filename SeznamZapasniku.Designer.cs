@@ -28,12 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.zapasniciSeznam = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jmeno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prijmeni = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vek = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uroven = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.oznaceni = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.smazatZapasnika = new System.Windows.Forms.Button();
             this.vytvoritZapasnika = new System.Windows.Forms.Button();
             this.pridatDoTurnaje = new System.Windows.Forms.Button();
@@ -50,14 +56,8 @@
             this.infoLabelDo2 = new System.Windows.Forms.Label();
             this.infoLabelOd2 = new System.Windows.Forms.Label();
             this.resetovatFiltry = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.jmeno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prijmeni = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vek = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.uroven = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.oznaceni = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vycistitVyber = new System.Windows.Forms.Button();
+            this.prejitKTurnaji = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.zapasniciSeznam)).BeginInit();
             this.infoGroupBox1.SuspendLayout();
             this.infoGroupBox2.SuspendLayout();
@@ -69,20 +69,20 @@
             this.zapasniciSeznam.AllowUserToDeleteRows = false;
             this.zapasniciSeznam.AllowUserToResizeColumns = false;
             this.zapasniciSeznam.AllowUserToResizeRows = false;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.zapasniciSeznam.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.zapasniciSeznam.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.zapasniciSeznam.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.zapasniciSeznam.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.zapasniciSeznam.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.zapasniciSeznam.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.zapasniciSeznam.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.zapasniciSeznam.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -91,29 +91,29 @@
             this.vek,
             this.uroven,
             this.oznaceni});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.zapasniciSeznam.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.zapasniciSeznam.DefaultCellStyle = dataGridViewCellStyle3;
             this.zapasniciSeznam.Location = new System.Drawing.Point(3, 95);
             this.zapasniciSeznam.MultiSelect = false;
             this.zapasniciSeznam.Name = "zapasniciSeznam";
             this.zapasniciSeznam.ReadOnly = true;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.zapasniciSeznam.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.zapasniciSeznam.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.zapasniciSeznam.RowHeadersVisible = false;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.zapasniciSeznam.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.zapasniciSeznam.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.zapasniciSeznam.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.zapasniciSeznam.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.zapasniciSeznam.ShowCellErrors = false;
@@ -123,6 +123,46 @@
             this.zapasniciSeznam.Size = new System.Drawing.Size(857, 321);
             this.zapasniciSeznam.StandardTab = true;
             this.zapasniciSeznam.TabIndex = 0;
+            this.zapasniciSeznam.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.zapasniciSeznam_CellMouseDoubleClick);
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Visible = false;
+            // 
+            // jmeno
+            // 
+            this.jmeno.HeaderText = "Jméno";
+            this.jmeno.Name = "jmeno";
+            this.jmeno.ReadOnly = true;
+            // 
+            // prijmeni
+            // 
+            this.prijmeni.HeaderText = "Příjmení";
+            this.prijmeni.Name = "prijmeni";
+            this.prijmeni.ReadOnly = true;
+            // 
+            // vek
+            // 
+            this.vek.HeaderText = "Věk";
+            this.vek.Name = "vek";
+            this.vek.ReadOnly = true;
+            // 
+            // uroven
+            // 
+            this.uroven.HeaderText = "Úroveň";
+            this.uroven.Name = "uroven";
+            this.uroven.ReadOnly = true;
+            // 
+            // oznaceni
+            // 
+            this.oznaceni.HeaderText = "oznaceni";
+            this.oznaceni.MaxInputLength = 1;
+            this.oznaceni.Name = "oznaceni";
+            this.oznaceni.ReadOnly = true;
+            this.oznaceni.Visible = false;
             // 
             // smazatZapasnika
             // 
@@ -349,73 +389,36 @@
             this.resetovatFiltry.UseVisualStyleBackColor = true;
             this.resetovatFiltry.Click += new System.EventHandler(this.resetovatFiltry_Click);
             // 
-            // button1
+            // vycistitVyber
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button1.Location = new System.Drawing.Point(525, 461);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(335, 33);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "Vyčistit výběr";
-            this.button1.UseVisualStyleBackColor = true;
+            this.vycistitVyber.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.vycistitVyber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.vycistitVyber.Location = new System.Drawing.Point(525, 461);
+            this.vycistitVyber.Name = "vycistitVyber";
+            this.vycistitVyber.Size = new System.Drawing.Size(335, 33);
+            this.vycistitVyber.TabIndex = 17;
+            this.vycistitVyber.Text = "Vyčistit výběr";
+            this.vycistitVyber.UseVisualStyleBackColor = true;
+            this.vycistitVyber.Click += new System.EventHandler(this.vycistitVyber_Click);
             // 
-            // button2
+            // prejitKTurnaji
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button2.Location = new System.Drawing.Point(3, 461);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(509, 33);
-            this.button2.TabIndex = 18;
-            this.button2.Text = "Přejít k turnaji";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Visible = false;
-            // 
-            // jmeno
-            // 
-            this.jmeno.HeaderText = "Jméno";
-            this.jmeno.Name = "jmeno";
-            this.jmeno.ReadOnly = true;
-            // 
-            // prijmeni
-            // 
-            this.prijmeni.HeaderText = "Příjmení";
-            this.prijmeni.Name = "prijmeni";
-            this.prijmeni.ReadOnly = true;
-            // 
-            // vek
-            // 
-            this.vek.HeaderText = "Věk";
-            this.vek.Name = "vek";
-            this.vek.ReadOnly = true;
-            // 
-            // uroven
-            // 
-            this.uroven.HeaderText = "Úroveň";
-            this.uroven.Name = "uroven";
-            this.uroven.ReadOnly = true;
-            // 
-            // oznaceni
-            // 
-            this.oznaceni.HeaderText = "oznaceni";
-            this.oznaceni.MaxInputLength = 1;
-            this.oznaceni.Name = "oznaceni";
-            this.oznaceni.ReadOnly = true;
-            this.oznaceni.Visible = false;
+            this.prejitKTurnaji.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.prejitKTurnaji.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.prejitKTurnaji.Location = new System.Drawing.Point(3, 461);
+            this.prejitKTurnaji.Name = "prejitKTurnaji";
+            this.prejitKTurnaji.Size = new System.Drawing.Size(509, 33);
+            this.prejitKTurnaji.TabIndex = 18;
+            this.prejitKTurnaji.Text = "Přejít k turnaji";
+            this.prejitKTurnaji.UseVisualStyleBackColor = true;
+            this.prejitKTurnaji.Click += new System.EventHandler(this.prejitKTurnaji_Click);
             // 
             // SeznamZapasniku
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.prejitKTurnaji);
+            this.Controls.Add(this.vycistitVyber);
             this.Controls.Add(this.resetovatFiltry);
             this.Controls.Add(this.infoGroupBox2);
             this.Controls.Add(this.editovatZapasnika);
@@ -455,8 +458,8 @@
         private System.Windows.Forms.Label infoLabelDo2;
         private System.Windows.Forms.Label infoLabelOd2;
         private System.Windows.Forms.Button resetovatFiltry;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button vycistitVyber;
+        private System.Windows.Forms.Button prejitKTurnaji;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn jmeno;
         private System.Windows.Forms.DataGridViewTextBoxColumn prijmeni;

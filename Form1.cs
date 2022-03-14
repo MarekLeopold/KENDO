@@ -18,6 +18,7 @@ namespace KENDO
     {
         static string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/KENDO/"; // Cesta do pracovního adresáře
         public List<Zapasnik> zapasnici = new List<Zapasnik>();
+        public List<Pool> pooly = new List<Pool>();
 
         public Form1()
         {
@@ -94,8 +95,6 @@ namespace KENDO
                     {
                         SeznamZapasniku.Instance.BringToFront();
                     }
-
-                    SeznamZapasniku.Instance.setFocus();
                     break;
 
                 case "EditovatZapasnika":
@@ -112,6 +111,34 @@ namespace KENDO
                     }
 
                     EditovatZapasnika.Instance.setFocus();
+                    break;
+
+                case "Turnaj":
+                    if (!display.Contains(Turnaj.Instance))
+                    {
+                        display.Controls.Add(Turnaj.Instance);
+                        Turnaj.Instance.Dock = DockStyle.Fill;
+                        Turnaj.Instance.BringToFront();
+                        Turnaj.Instance.setParent(this);
+                    }
+                    else
+                    {
+                        Turnaj.Instance.BringToFront();
+                    }
+                    break;
+
+                case "Pool3":
+                    if (!display.Contains(Pool3.Instance))
+                    {
+                        display.Controls.Add(Pool3.Instance);
+                        Pool3.Instance.Dock = DockStyle.Fill;
+                        Pool3.Instance.BringToFront();
+                        Pool3.Instance.setParent(this);
+                    }
+                    else
+                    {
+                        Pool3.Instance.BringToFront();
+                    }
                     break;
 
                 default:

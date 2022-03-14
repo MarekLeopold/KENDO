@@ -53,6 +53,12 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Pool.cs" />
+    <Compile Include="Pool3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pool3.Designer.cs">
+      <DependentUpon>Pool3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="EditovatZapasnika.cs">
@@ -67,9 +73,18 @@
     <Compile Include="SeznamZapasniku.Designer.cs">
       <DependentUpon>SeznamZapasniku.cs</DependentUpon>
     </Compile>
+    <Compile Include="Turnaj.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Turnaj.Designer.cs">
+      <DependentUpon>Turnaj.cs</DependentUpon>
+    </Compile>
     <Compile Include="Zapasnik.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pool3.resx">
+      <DependentUpon>Pool3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -86,6 +101,10 @@
     <EmbeddedResource Include="SeznamZapasniku.resx">
       <DependentUpon>SeznamZapasniku.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Turnaj.resx">
+      <DependentUpon>Turnaj.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="dotazy.md" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -95,6 +114,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="scénář.md" />
+    <None Include="zvolená technologie.md" />
+    <None Include="časový harmonogram.md" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -25,10 +25,6 @@ namespace KENDO
                 return _instance;
             }
         }
-        public void setFocus()
-        {
-           // jmeno.Focus();
-        }
 
         public void setParent(Form1 uk)
         {
@@ -61,6 +57,10 @@ namespace KENDO
 
         public void vykreslitGrid()
         {
+            int oznacenyRadek = 0;
+            if (zapasniciSeznam.SelectedRows.Count > 0) { 
+            oznacenyRadek = zapasniciSeznam.SelectedRows[0].Index;
+            }
             zapasniciSeznam.Rows.Clear();
 
 
@@ -81,6 +81,10 @@ namespace KENDO
                     }
                     zapasniciSeznam.Rows.Add(row);
                 }
+            }
+            if (zapasniciSeznam.Rows.Count > 0)
+            {
+                zapasniciSeznam.Rows[oznacenyRadek].Selected = true;
             }
         }
 
@@ -260,6 +264,105 @@ namespace KENDO
             else
             {
                 MessageBox.Show("Pro odebrání zápasníka z turnaje musí být vybrán řádek se zápasníkem", "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void prejitKTurnaji_Click(object sender, EventArgs e)
+        {
+            List<Zapasnik> ZapasniciTurnaje = new List<Zapasnik>(); // zduplikování listu zápasníků (pouze zápasící)
+            List<Zapasnik> ZapasniciTurnajeNahodne = new List<Zapasnik>(); // zduplikování listu zápasníků s náhodným pořadím
+
+                for (int i = 0; i < _parent.zapasnici.Count; i++)
+                {
+                    if (_parent.zapasnici[i].ucastnikTurnaje == 1)
+                    {
+                        ZapasniciTurnaje.Add(_parent.zapasnici[i]);
+                    }
+                }
+
+            if (ZapasniciTurnaje.Count < 4)
+            {
+                MessageBox.Show("Zápas nelze zahájit, není splněný požadavek na minimální počet zápasníků (4)", "Nesplněný požadavek", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                int plnychPoolu = 0;
+                int castecnychPoolu = 0;
+                // vypocet poolu
+                if (ZapasniciTurnaje.Count % 3 == 0)
+                {
+                    plnychPoolu = ZapasniciTurnaje.Count / 3;
+                }
+                else if (ZapasniciTurnaje.Count % 3 == 1)
+                {
+                    plnychPoolu = (ZapasniciTurnaje.Count - 4) / 3;
+                    castecnychPoolu = 2;
+                }
+                else
+                {
+                    plnychPoolu = (ZapasniciTurnaje.Count - 2) / 3;
+                    castecnychPoolu = 1;
+                }
+
+                // náhodné zpřeházení zápasníků a vkládání do poolů
+                var random = new Random();
+                var nahodneZprehazeni = ZapasniciTurnaje.OrderBy(item => random.Next());
+
+                foreach (var zapasnikDoPoolu in nahodneZprehazeni)
+                {
+                    ZapasniciTurnajeNahodne.Add(zapasnikDoPoolu);
+                }
+
+                ZapasniciTurnaje.Clear(); // vycisteni pameti
+
+                if (castecnychPoolu >= 1) {
+                    _parent.pooly.Add(new Pool(ZapasniciTurnajeNahodne[0], ZapasniciTurnajeNahodne[1]));
+                    if (castecnychPoolu == 2) {
+                        _parent.pooly.Add(new Pool(ZapasniciTurnajeNahodne[2], ZapasniciTurnajeNahodne[3]));
+                    }
+                }
+                if(ZapasniciTurnajeNahodne.Count > 4)
+                {
+                    for(int i = castecnychPoolu * 2; i < ZapasniciTurnajeNahodne.Count; i = i + 3)
+                    {
+                        _parent.pooly.Add(new Pool(ZapasniciTurnajeNahodne[i], ZapasniciTurnajeNahodne[i + 1], ZapasniciTurnajeNahodne[i + 2]));
+                    }
+                }
+
+                _parent.Zobrazovac("Turnaj");
+            }               
+
+        }
+
+        private void vycistitVyber_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < _parent.zapasnici.Count; i++)
+            {
+                _parent.zapasnici[i].ucastnikTurnaje = 0;
+            }
+            vykreslitGrid();
+        }
+
+        private void zapasniciSeznam_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (zapasniciSeznam.SelectedRows.Count == 1)
+            {
+                for (int i = 0; i < _parent.zapasnici.Count; i++)
+                {
+                    if (_parent.zapasnici[i].ID == Convert.ToByte(zapasniciSeznam.SelectedRows[0].Cells[0].Value))
+                    {
+                        if(_parent.zapasnici[i].ucastnikTurnaje == 0)
+                        {
+                            _parent.zapasnici[i].ucastnikTurnaje = 1;
+                        }
+                        else
+                        {
+                            _parent.zapasnici[i].ucastnikTurnaje = 0;
+                        }
+                        vykreslitGrid();
+                        break;
+                    }
+                }
             }
         }
     }
