@@ -164,6 +164,45 @@
             this.oznaceni.ReadOnly = true;
             this.oznaceni.Visible = false;
             // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Visible = false;
+            // 
+            // jmeno
+            // 
+            this.jmeno.HeaderText = "Jméno";
+            this.jmeno.Name = "jmeno";
+            this.jmeno.ReadOnly = true;
+            // 
+            // prijmeni
+            // 
+            this.prijmeni.HeaderText = "Příjmení";
+            this.prijmeni.Name = "prijmeni";
+            this.prijmeni.ReadOnly = true;
+            // 
+            // vek
+            // 
+            this.vek.HeaderText = "Věk";
+            this.vek.Name = "vek";
+            this.vek.ReadOnly = true;
+            // 
+            // uroven
+            // 
+            this.uroven.HeaderText = "Úroveň";
+            this.uroven.Name = "uroven";
+            this.uroven.ReadOnly = true;
+            // 
+            // oznaceni
+            // 
+            this.oznaceni.HeaderText = "oznaceni";
+            this.oznaceni.MaxInputLength = 1;
+            this.oznaceni.Name = "oznaceni";
+            this.oznaceni.ReadOnly = true;
+            this.oznaceni.Visible = false;
+            // 
             // smazatZapasnika
             // 
             this.smazatZapasnika.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
