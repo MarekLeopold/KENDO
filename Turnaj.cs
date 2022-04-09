@@ -52,7 +52,7 @@ namespace KENDO
                 }
                 if (_parent.pooly[_parent.pooly.Count-1-i].vysledek(1) != -1)
                 {
-                    _parent.finalniDvojice[i].add(_parent.pooly[_parent.pooly.Count - 1 - i].zapasnici[_parent.pooly[_parent.pooly.Count - 1 - i].vysledek(0)].jmeno + " " + _parent.pooly[_parent.pooly.Count - 1 - i].zapasnici[_parent.pooly[_parent.pooly.Count - 1 - i].vysledek(1)].prijmeni, 1);
+                     _parent.finalniDvojice[_parent.pooly.Count - 1 - i].add(_parent.pooly[_parent.pooly.Count - 1 - i].zapasnici[_parent.pooly[_parent.pooly.Count - 1 - i].vysledek(0)].jmeno + " " + _parent.pooly[_parent.pooly.Count - 1 - i].zapasnici[_parent.pooly[_parent.pooly.Count - 1 - i].vysledek(0)].prijmeni, 0);
                 }
             }
 

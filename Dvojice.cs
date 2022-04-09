@@ -63,8 +63,11 @@ public class Dvojice
         this.polohaX = x;
         this.polohaY = y;
 
+
         g.DrawLine(CernePero, x, y, x + sirka , y);
-        g.DrawString(jmena[0], font, barva, x + 5, y + 5);
-      
+        g.DrawString(this.clen(1), font, barva, x + 2, y + 2);
+        g.DrawLine(CernePero, x, y, x, y + 20);
+        g.DrawLine(CernePero, x, y+20, x + sirka, y+20);
+        g.DrawLine(CernePero, x+sirka, y + 20, x + sirka, y);
     }
 }
