@@ -130,7 +130,6 @@ namespace KENDO
                 case 19: return "10 dan";
                 default: return "error";
             }
-            return "error";
         }
 
         private void omezeniStupneOd_SelectedIndexChanged(object sender, EventArgs e)
@@ -329,6 +328,24 @@ namespace KENDO
                     }
                 }
 
+
+
+                int pom = _parent.pooly.Count();
+                while(pom > 0)
+                {
+                    for (int i = 0; i < pom; i++)
+                    {
+                        _parent.finalniDvojice.Add(new Dvojice());
+                    }
+
+                    if(pom > 1 && pom % 2 == 1)
+                    {
+                        pom = pom + 1;
+                    }
+                    pom = pom / 2;
+                }
+
+                //MessageBox.Show(Convert.ToString(_parent.finalniDvojice.Count()));
                 _parent.Zobrazovac("Turnaj");
             }               
 

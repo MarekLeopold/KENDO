@@ -19,6 +19,7 @@ namespace KENDO
         static string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/KENDO/"; // Cesta do pracovního adresáře
         public List<Zapasnik> zapasnici = new List<Zapasnik>();
         public List<Pool> pooly = new List<Pool>();
+        public List<Dvojice> finalniDvojice = new List<Dvojice>();
 
         public Form1()
         {
@@ -139,8 +140,8 @@ namespace KENDO
                     {
                         Pool3.Instance.BringToFront();
                     }
-                    break;
 
+                    break;
                 default:
                     break;
             }

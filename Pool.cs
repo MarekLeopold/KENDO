@@ -5,7 +5,8 @@ using System.Drawing;
 public class Pool
 {
 	public List<Zapasnik> zapasnici;
-
+	public List<int> napomenuti; //6
+	public List<char> vysledky; // = je remiza 0 = nic  
 
 
 	// grafika
@@ -16,22 +17,39 @@ public class Pool
 
 	public Pool(Zapasnik zapasnik1, Zapasnik zapasnik2, Zapasnik zapasnik3)
 	{
-		zapasnici = new List<Zapasnik>();
-		zapasnici.Add(zapasnik1);
-		zapasnici.Add(zapasnik2);
-		zapasnici.Add(zapasnik3);
+		this.zapasnici = new List<Zapasnik>();
+		this.napomenuti = new List<int>();
+		this.vysledky = new List<char>();
+
+		for (int i = 0; i < 6; i++) { 
+			this.napomenuti.Add(0);
+			this.vysledky.Add('0');
+		
+		}
+		this.zapasnici.Add(zapasnik1);
+		this.zapasnici.Add(zapasnik2);
+		this.zapasnici.Add(zapasnik3);
 	}
 
 	public Pool(Zapasnik zapasnik1, Zapasnik zapasnik2)
 	{
-		zapasnici = new List<Zapasnik>();
-		zapasnici.Add(zapasnik1);
-		zapasnici.Add(zapasnik2);
+		this.zapasnici = new List<Zapasnik>();
+		this.napomenuti = new List<int>();
+		this.vysledky = new List<char>();
+
+		for (int i = 0; i < 2; i++)
+		{
+			this.napomenuti.Add(0);
+			this.vysledky.Add('0');
+
+		}
+		this.zapasnici.Add(zapasnik1);
+		this.zapasnici.Add(zapasnik2);
 	}
 
 	public int pocetZapasniku()
     {
-		return zapasnici.Count;
+		return this.zapasnici.Count;
     }
 
 	public SizeF size(Graphics g)
@@ -82,13 +100,13 @@ public class Pool
 		g.DrawString("POOL " + poradi, nadpis, barva, x + sirka + 8 - Convert.ToInt32(velikostNadpisuPoolu.Width), y);
 		for(int i = 0; i < pocetZapasniku(); i++)
         {
-			g.DrawString(zapasnici[i].jmeno + " " + zapasnici[i].prijmeni, font, barva, x + 4, y + 18 + i * 16);
+			g.DrawString(this.zapasnici[i].jmeno + " " + this.zapasnici[i].prijmeni, font, barva, x + 4, y + 18 + i * 16);
 		}
 	}
 
 	public bool kliknutoV(Point souradnice)
     {
-		if(souradnice.X >= polohaX && souradnice.X <= polohaX + sirka + 8 && souradnice.Y >= polohaY && souradnice.Y <= polohaY + vyska)
+		if(souradnice.X >= this.polohaX && souradnice.X <= this.polohaX + this.sirka + 8 && souradnice.Y >= this.polohaY && souradnice.Y <= this.polohaY + this.vyska)
         {
 			return true;
         }
@@ -99,6 +117,98 @@ public class Pool
     {
 		this.sirka = sirka;
     }
+
+	public int vysledek(int poradi)
+	{
+		/*
+		vysledky
+		0 -> 0 x 1 -> 1 x 2
+		1 -> 1 x 2 -> 3 x 4
+		2 -> 2 x 0 -> 5 x 6
+		*/
+
+		bool dobojovano = true;
+
+		if ((vysledky[0] == '0' && vysledky[1] == '0') && (napomenuti[0] < 2 && napomenuti[1] < 2)) {
+			dobojovano = false;
+		}
+		if ((vysledky[2] == '0' && vysledky[3] == '0') && (napomenuti[2] < 2 && napomenuti[3] < 2))
+		{
+			dobojovano = false;
+		}
+		if ((vysledky[4] == '0' && vysledky[5] == '0') && (napomenuti[4] < 2 && napomenuti[5] < 2))
+		{
+			dobojovano = false;
+		}
+
+		if (!dobojovano)
+		{
+			return -1;
+		}
+
+		int[] vypocetPoradi = { 0, 0, 0 };
+
+		// vyhry v turajich
+		if (vysledky[0] != '0' && vysledky[0] != '=') { vypocetPoradi[0] += 2; }
+		else if (vysledky[0] == '=') { vypocetPoradi[0] += 1; }
+
+		if (vysledky[1] != '0' && vysledky[1] != '=') { vypocetPoradi[1] += 2; }
+		else if (vysledky[1] == '=') { vypocetPoradi[1] += 1; }
+
+		if (vysledky[2] != '0' && vysledky[2] != '=') { vypocetPoradi[1] += 2; }
+		else if (vysledky[2] == '=') { vypocetPoradi[1] += 1; }
+
+		if (vysledky[3] != '0' && vysledky[3] != '=') { vypocetPoradi[2] += 2; }
+		else if (vysledky[3] == '=') { vypocetPoradi[2] += 1; }
+
+		if (vysledky[4] != '0' && vysledky[4] != '=') { vypocetPoradi[2] += 2; }
+		else if (vysledky[4] == '=') { vypocetPoradi[2] += 1; }
+
+		if (vysledky[5] != '0' && vysledky[5] != '=') { vypocetPoradi[0] += 2; }
+		else if (vysledky[5] == '=') { vypocetPoradi[0] += 1; }
+
+		//kontumacni vyhry
+		if (napomenuti[0] >= 2) { vypocetPoradi[1] += 2; }
+		if (napomenuti[1] >= 2) { vypocetPoradi[0] += 2; }
+		if (napomenuti[2] >= 2) { vypocetPoradi[2] += 2; }
+		if (napomenuti[3] >= 2) { vypocetPoradi[1] += 2; }
+		if (napomenuti[4] >= 2) { vypocetPoradi[0] += 2; }
+		if (napomenuti[5] >= 2) { vypocetPoradi[2] += 2; }
+
+
+		if (poradi == 0) {
+			if (vypocetPoradi[0] >= vypocetPoradi[1] && vypocetPoradi[1] >= vypocetPoradi[2])
+			{
+				return 0;
+			}
+			else if (vypocetPoradi[0] <= vypocetPoradi[1] && vypocetPoradi[1] >= vypocetPoradi[2])
+			{
+				return 1;
+			}
+			else
+			{
+				return 2;
+			}
+		}
+		else if(poradi == 1)
+        {
+			if (vypocetPoradi[0] >= vypocetPoradi[1] && vypocetPoradi[1] >= vypocetPoradi[2])
+			{
+				return 1;
+			}
+			else if (vypocetPoradi[0] <= vypocetPoradi[1] && vypocetPoradi[1] >= vypocetPoradi[2])
+			{
+				return 2;
+			}
+			else
+			{
+				return 0;
+			}
+		}
+
+		return -1;
+
+	}
 
 
 
