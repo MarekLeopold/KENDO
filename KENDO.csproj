@@ -53,6 +53,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Hodnoceni.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Hodnoceni.Designer.cs">
+      <DependentUpon>Hodnoceni.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pool.cs" />
     <Compile Include="Pool3.cs">
       <SubType>UserControl</SubType>
@@ -83,6 +89,9 @@
     <Compile Include="Zapasnik.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hodnoceni.resx">
+      <DependentUpon>Hodnoceni.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pool3.resx">
       <DependentUpon>Pool3.cs</DependentUpon>

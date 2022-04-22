@@ -79,7 +79,7 @@ namespace KENDO
 
 
         /* Zobrazovací logika */
-        public void Zobrazovac(String zobrazeni)
+        public void Zobrazovac(String zobrazeni, int x = 0, int y = 0)
         {
             switch (zobrazeni)
             {
@@ -140,7 +140,21 @@ namespace KENDO
                     {
                         Pool3.Instance.BringToFront();
                     }
-
+                    break;
+                case "Hodnoceni":
+                    if (!display.Contains(Hodnoceni.Instance))
+                    {
+                        display.Controls.Add(Hodnoceni.Instance);
+                        Hodnoceni.Instance.Dock = DockStyle.Fill;
+                        Hodnoceni.Instance.BringToFront();
+                        Hodnoceni.Instance.setParent(this);
+                        Hodnoceni.Instance.set(x, y);
+                    }
+                    else
+                    {
+                        Hodnoceni.Instance.BringToFront();
+                        Hodnoceni.Instance.set(x, y);
+                    }
                     break;
                 default:
                     break;
