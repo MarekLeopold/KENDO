@@ -49,7 +49,13 @@
             this.popisekHodnoceni = new System.Windows.Forms.Label();
             this.popisekSouboj = new System.Windows.Forms.Label();
             this.zpet = new System.Windows.Forms.Button();
+            this.pomocnaTabulka2 = new System.Windows.Forms.TableLayoutPanel();
+            this.NapomenutiUdelit = new System.Windows.Forms.Button();
+            this.NapomenutiOdebrat = new System.Windows.Forms.Button();
+            this.napomenuti = new System.Windows.Forms.Label();
+            this.infoOBodu = new System.Windows.Forms.Label();
             this.pomocnaTabulka.SuspendLayout();
+            this.pomocnaTabulka2.SuspendLayout();
             this.SuspendLayout();
             // 
             // pomocnaTabulka
@@ -159,6 +165,7 @@
             this.h2.TabIndex = 2;
             this.h2.Text = "Ht";
             this.h2.UseVisualStyleBackColor = true;
+            this.h2.Click += new System.EventHandler(this.h2_Click);
             // 
             // h1
             // 
@@ -169,6 +176,7 @@
             this.h1.TabIndex = 2;
             this.h1.Text = "Ht";
             this.h1.UseVisualStyleBackColor = true;
+            this.h1.Click += new System.EventHandler(this.h1_Click);
             // 
             // t2
             // 
@@ -179,6 +187,7 @@
             this.t2.TabIndex = 2;
             this.t2.Text = "T";
             this.t2.UseVisualStyleBackColor = true;
+            this.t2.Click += new System.EventHandler(this.t2_Click);
             // 
             // t1
             // 
@@ -189,6 +198,7 @@
             this.t1.TabIndex = 2;
             this.t1.Text = "T";
             this.t1.UseVisualStyleBackColor = true;
+            this.t1.Click += new System.EventHandler(this.t1_Click);
             // 
             // d2
             // 
@@ -199,6 +209,7 @@
             this.d2.TabIndex = 2;
             this.d2.Text = "D";
             this.d2.UseVisualStyleBackColor = true;
+            this.d2.Click += new System.EventHandler(this.d2_Click);
             // 
             // d1
             // 
@@ -209,6 +220,7 @@
             this.d1.TabIndex = 2;
             this.d1.Text = "D";
             this.d1.UseVisualStyleBackColor = true;
+            this.d1.Click += new System.EventHandler(this.d1_Click);
             // 
             // k2
             // 
@@ -219,6 +231,7 @@
             this.k2.TabIndex = 2;
             this.k2.Text = "K";
             this.k2.UseVisualStyleBackColor = true;
+            this.k2.Click += new System.EventHandler(this.k2_Click);
             // 
             // k1
             // 
@@ -229,6 +242,7 @@
             this.k1.TabIndex = 2;
             this.k1.Text = "K";
             this.k1.UseVisualStyleBackColor = true;
+            this.k1.Click += new System.EventHandler(this.k1_Click);
             // 
             // m2
             // 
@@ -239,16 +253,19 @@
             this.m2.TabIndex = 2;
             this.m2.Text = "M";
             this.m2.UseVisualStyleBackColor = true;
+            this.m2.Click += new System.EventHandler(this.m2_Click);
             // 
             // m1
             // 
             this.m1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.m1.BackColor = System.Drawing.SystemColors.Control;
             this.m1.Location = new System.Drawing.Point(99, 23);
             this.m1.Name = "m1";
             this.m1.Size = new System.Drawing.Size(60, 59);
             this.m1.TabIndex = 2;
             this.m1.Text = "M";
-            this.m1.UseVisualStyleBackColor = true;
+            this.m1.UseVisualStyleBackColor = false;
+            this.m1.Click += new System.EventHandler(this.m1_Click);
             // 
             // label3
             // 
@@ -288,7 +305,7 @@
             // 
             this.zpet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.zpet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.zpet.Location = new System.Drawing.Point(776, 365);
+            this.zpet.Location = new System.Drawing.Point(776, 393);
             this.zpet.Name = "zpet";
             this.zpet.Size = new System.Drawing.Size(92, 36);
             this.zpet.TabIndex = 4;
@@ -296,18 +313,84 @@
             this.zpet.UseVisualStyleBackColor = true;
             this.zpet.Click += new System.EventHandler(this.zpet_Click);
             // 
+            // pomocnaTabulka2
+            // 
+            this.pomocnaTabulka2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pomocnaTabulka2.ColumnCount = 3;
+            this.pomocnaTabulka2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.pomocnaTabulka2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.pomocnaTabulka2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.pomocnaTabulka2.Controls.Add(this.NapomenutiUdelit, 0, 0);
+            this.pomocnaTabulka2.Controls.Add(this.NapomenutiOdebrat, 2, 0);
+            this.pomocnaTabulka2.Controls.Add(this.napomenuti, 1, 0);
+            this.pomocnaTabulka2.Location = new System.Drawing.Point(179, 332);
+            this.pomocnaTabulka2.Name = "pomocnaTabulka2";
+            this.pomocnaTabulka2.RowCount = 1;
+            this.pomocnaTabulka2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.pomocnaTabulka2.Size = new System.Drawing.Size(518, 51);
+            this.pomocnaTabulka2.TabIndex = 5;
+            // 
+            // NapomenutiUdelit
+            // 
+            this.NapomenutiUdelit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.NapomenutiUdelit.Location = new System.Drawing.Point(3, 3);
+            this.NapomenutiUdelit.Name = "NapomenutiUdelit";
+            this.NapomenutiUdelit.Size = new System.Drawing.Size(94, 45);
+            this.NapomenutiUdelit.TabIndex = 0;
+            this.NapomenutiUdelit.Text = "Napomenutí udělit";
+            this.NapomenutiUdelit.UseVisualStyleBackColor = true;
+            this.NapomenutiUdelit.Click += new System.EventHandler(this.NapomenutiUdelit_Click);
+            // 
+            // NapomenutiOdebrat
+            // 
+            this.NapomenutiOdebrat.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.NapomenutiOdebrat.Location = new System.Drawing.Point(421, 3);
+            this.NapomenutiOdebrat.Name = "NapomenutiOdebrat";
+            this.NapomenutiOdebrat.Size = new System.Drawing.Size(94, 45);
+            this.NapomenutiOdebrat.TabIndex = 1;
+            this.NapomenutiOdebrat.Text = "Napomenutí odebrat";
+            this.NapomenutiOdebrat.UseVisualStyleBackColor = true;
+            this.NapomenutiOdebrat.Click += new System.EventHandler(this.NapomenutiOdebrat_Click);
+            // 
+            // napomenuti
+            // 
+            this.napomenuti.AutoSize = true;
+            this.napomenuti.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.napomenuti.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.napomenuti.ForeColor = System.Drawing.Color.Red;
+            this.napomenuti.Location = new System.Drawing.Point(103, 0);
+            this.napomenuti.Name = "napomenuti";
+            this.napomenuti.Size = new System.Drawing.Size(312, 51);
+            this.napomenuti.TabIndex = 2;
+            this.napomenuti.Text = "▲▲";
+            this.napomenuti.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // infoOBodu
+            // 
+            this.infoOBodu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.infoOBodu.Location = new System.Drawing.Point(179, 393);
+            this.infoOBodu.Name = "infoOBodu";
+            this.infoOBodu.Size = new System.Drawing.Size(518, 23);
+            this.infoOBodu.TabIndex = 6;
+            this.infoOBodu.Text = "Protihráč má bod za napomenutí !";
+            this.infoOBodu.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // Hodnoceni
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.infoOBodu);
+            this.Controls.Add(this.pomocnaTabulka2);
             this.Controls.Add(this.zpet);
             this.Controls.Add(this.popisekSouboj);
             this.Controls.Add(this.popisekHodnoceni);
             this.Controls.Add(this.pomocnaTabulka);
             this.Name = "Hodnoceni";
-            this.Size = new System.Drawing.Size(871, 404);
+            this.Size = new System.Drawing.Size(871, 432);
             this.pomocnaTabulka.ResumeLayout(false);
             this.pomocnaTabulka.PerformLayout();
+            this.pomocnaTabulka2.ResumeLayout(false);
+            this.pomocnaTabulka2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -334,5 +417,10 @@
         private System.Windows.Forms.Label popisekHodnoceni;
         private System.Windows.Forms.Label popisekSouboj;
         private System.Windows.Forms.Button zpet;
+        private System.Windows.Forms.TableLayoutPanel pomocnaTabulka2;
+        private System.Windows.Forms.Button NapomenutiUdelit;
+        private System.Windows.Forms.Button NapomenutiOdebrat;
+        private System.Windows.Forms.Label napomenuti;
+        private System.Windows.Forms.Label infoOBodu;
     }
 }

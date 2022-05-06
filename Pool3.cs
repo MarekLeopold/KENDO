@@ -113,68 +113,120 @@ namespace KENDO
         }
 
 
-        private void vykresli()
-        {
-            for(int i = 0; i < 6; i++)
+        public void vykresli()
+        { 
+
+            for (int i = 0; i < 6; i++)
             {
                 HodnoticiTlacitka[i].Enabled = true;
+                int idZapasuProtihrace = 0;
+                if (i == 0) {idZapasuProtihrace = 1; }
+                else if (i == 1) {idZapasuProtihrace = 0; }
+                else if (i == 2) {idZapasuProtihrace = 3; }
+                else if (i == 3) {idZapasuProtihrace = 2; }
+                else if (i == 4) {idZapasuProtihrace = 5; }
+                else if (i == 5) {idZapasuProtihrace = 4; }
 
-                if (_parent.pooly[ID].vysledky[i * 2 + 1] != '0')
+
+                if (_parent.pooly[ID].vysledky[i + 6] != '0')
                 {
-                    Vysledky[i].Text = Convert.ToString(_parent.pooly[ID].vysledky[i * 2]) + Convert.ToString(_parent.pooly[ID].vysledky[i * 2 + 1]);
+                    Vysledky[i].Text = (Convert.ToString(_parent.pooly[ID].vysledky[i]) +" "+ Convert.ToString(_parent.pooly[ID].vysledky[i + 6])).ToUpper();
                 }
-                else if (_parent.pooly[ID].vysledky[i * 2] != '0')
+                else if (_parent.pooly[ID].vysledky[i] != '0')
                 {
-                    Vysledky[i].Text = Convert.ToString(_parent.pooly[ID].vysledky[i * 2]);
+                    Vysledky[i].Text = Convert.ToString(_parent.pooly[ID].vysledky[i]).ToUpper();
                 }
                 else
                 {
                         Vysledky[i].Text = "";
                 }
 
+                Vysledky[i].Text = Vysledky[i].Text.Replace("H", "Ht");
+
+                for(int y = 0; y < _parent.pooly[ID].napomenuti[idZapasuProtihrace]/2; y++)
+                {
+                    Vysledky[i].Text += " H";
+                }
+
+
                 Napomenuti[i].Text = "";
-                for(int y = 0; y < _parent.pooly[ID].napomenuti[i]; y++)
+                int pomNapomenuti = _parent.pooly[ID].napomenuti[i];
+                if (pomNapomenuti >= 2)
+                {
+                    pomNapomenuti = pomNapomenuti - 2;
+                }
+                for(int y = 0; y < pomNapomenuti; y++)
                 {
                     Napomenuti[i].Text += "▲";
                 }
             }
 
 
-
-            if(_parent.pooly[ID].zapasnici.Count() >= 3)
+            for(int i = 0; i < _parent.pooly[ID].vysledky.Count() / 4; i++)
             {
-
-                for (int i = 0; i < 3; i++)
+                if (_parent.pooly[ID].ukonceno[i] == false)
                 {
-                    if(_parent.pooly[ID].ukonceno[i] == false) { 
-                        UkoncovaciTlacitka[i].Text = "Ukončit";
-                    }
-                    else
-                    {
-                        UkoncovaciTlacitka[i].Text = "Obnovit";
-                        HodnoticiTlacitka[i * 2].Enabled = false;
-                        HodnoticiTlacitka[i * 2 + 1].Enabled = false;
-                    }
+                    UkoncovaciTlacitka[i].Text = "Ukončit";
+                }
+                else
+                {
+                    UkoncovaciTlacitka[i].Text = "Obnovit";
+                    HodnoticiTlacitka[i * 2].Enabled = false;
+                    HodnoticiTlacitka[i * 2 + 1].Enabled = false;
+                }
+
+                switch (_parent.pooly[ID].vyherce(i))
+                {
+                    case 0:
+                        Jmeno[i * 2].BackColor = SystemColors.Control;
+                        Jmeno[i * 2 + 1].BackColor = SystemColors.Control;
+
+                        Pozadi[i * 2].BackColor = SystemColors.Control;
+                        Pozadi[i * 2 + 1].BackColor = SystemColors.Control;
+                        break;
+                    case 1:
+                        Jmeno[i * 2].BackColor = zelena;
+                        Jmeno[i * 2 + 1].BackColor = cervena;
+
+                        Pozadi[i * 2].BackColor = zelena;
+                        Pozadi[i * 2 + 1].BackColor = cervena;
+                        break;
+                    case 2:
+                        Jmeno[i * 2].BackColor = cervena;
+                        Jmeno[i * 2 + 1].BackColor = zelena;
+
+                        Pozadi[i * 2].BackColor = cervena;
+                        Pozadi[i * 2 + 1].BackColor = zelena;
+                        break;
+                    case 3:
+                        Jmeno[i * 2].BackColor = zluta;
+                        Jmeno[i * 2 + 1].BackColor = zluta;
+
+                        Pozadi[i * 2].BackColor = zluta;
+                        Pozadi[i * 2 + 1].BackColor = zluta;
+                        break;
                 }
             }
+
+
         }
 
         private void stav1_Click(object sender, EventArgs e)
         {
-            ukoncitObnovit(sender, e, 0);
+            ukoncitObnovit(0);
         }
 
         private void stav2_Click(object sender, EventArgs e)
         {
-            ukoncitObnovit(sender, e, 1);
+            ukoncitObnovit(1);
         }
 
         private void stav3_Click(object sender, EventArgs e)
         {
-            ukoncitObnovit(sender, e, 2);
+            ukoncitObnovit(2);
         }
 
-        private void ukoncitObnovit(object sender, EventArgs e, int poradi)
+        private void ukoncitObnovit(int poradi)
         {
             if (_parent.pooly[ID].ukonceno[poradi] == false)
             {
@@ -185,36 +237,37 @@ namespace KENDO
                 _parent.pooly[ID].ukonceno[poradi] = false;
             }
             vykresli();
+            //MessageBox.Show(Convert.ToString(_parent.pooly[ID].ukonceno[0]) + " " + Convert.ToString(_parent.pooly[ID].ukonceno[1]) + " " + Convert.ToString(_parent.pooly[ID].ukonceno[2]));
         }
 
         private void hodnotit1_Click(object sender, EventArgs e)
         {
-            _parent.Zobrazovac("Hodnoceni", ID, 1);
+            _parent.Zobrazovac("Hodnoceni", ID, 0);
         }
 
         private void hodnotit2_Click(object sender, EventArgs e)
         {
-            _parent.Zobrazovac("Hodnoceni", ID, 2);
+            _parent.Zobrazovac("Hodnoceni", ID, 1);
         }
 
         private void hodnotit3_Click(object sender, EventArgs e)
         {
-            _parent.Zobrazovac("Hodnoceni", ID, 3);
+            _parent.Zobrazovac("Hodnoceni", ID, 2);
         }
 
         private void hodnotit4_Click(object sender, EventArgs e)
         {
-            _parent.Zobrazovac("Hodnoceni", ID, 4);
+            _parent.Zobrazovac("Hodnoceni", ID, 3);
         }
 
         private void hodnotit5_Click(object sender, EventArgs e)
         {
-            _parent.Zobrazovac("Hodnoceni", ID, 5);
+            _parent.Zobrazovac("Hodnoceni", ID, 4);
         }
 
         private void hodnotit6_Click(object sender, EventArgs e)
         {
-            _parent.Zobrazovac("Hodnoceni", ID, 6);
+            _parent.Zobrazovac("Hodnoceni", ID, 5);
         }
     }
 }

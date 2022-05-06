@@ -135,10 +135,12 @@ namespace KENDO
                         Pool3.Instance.Dock = DockStyle.Fill;
                         Pool3.Instance.BringToFront();
                         Pool3.Instance.setParent(this);
+                        Pool3.Instance.vykresli();
                     }
                     else
                     {
                         Pool3.Instance.BringToFront();
+                        Pool3.Instance.vykresli();
                     }
                     break;
                 case "Hodnoceni":

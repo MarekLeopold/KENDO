@@ -6,7 +6,7 @@ public class Pool
 {
     public List<Zapasnik> zapasnici;
     public List<int> napomenuti; //6
-    public List<char> vysledky; // = je remiza 0 = nic  
+    public List<char> vysledky; //0 = nic  
     public List<bool> ukonceno; //3
 
     // grafika
@@ -130,6 +130,152 @@ public class Pool
 
         return -1;
 
+    }
+
+    public int vyherce(int souboj)
+    {
+        if(this.ukonceno[souboj] != true)
+        {
+            return 0;
+        }
+
+        int bodyL = 0;
+        int bodyR = 0;
+
+
+        if(this.vysledky[souboj*2] != '0')
+        {
+            bodyL++;
+        }
+        if(this.vysledky[souboj*2+6] != '0')
+        {
+            bodyL++;
+        }
+
+        if (this.vysledky[souboj * 2 + 1] != '0')
+        {
+            bodyR++;
+        }
+        if (this.vysledky[souboj * 2 + 1 + 6] != '0')
+        {
+            bodyR++;
+        }
+
+        if(this.napomenuti[souboj*2]/2 >= 1)
+        {
+            bodyR = bodyR + this.napomenuti[souboj * 2] / 2;
+        }
+
+        if (this.napomenuti[souboj * 2 + 1] / 2 >= 1)
+        {
+            bodyL = bodyL + this.napomenuti[souboj * 2 + 1] / 2;
+        }
+
+        if (bodyL > bodyR) { return 1; }
+        else if (bodyL < bodyR) { return 2; }
+        else return 3;
+    }
+
+    int vitez(int poradi)
+    {
+        if (this.ukonceno[0] == true && this.ukonceno[1] == true && this.ukonceno[2]) {
+            List<int> body = new List<int>();
+            for (int i = 0; i < 3; i++)
+            {
+                body.Add(0);
+            }
+
+            // 1. zapas
+            if (this.vyherce(0) == 3)
+            {
+                body[0] = body[0] + 1;
+                body[1] = body[1] + 1;
+            }
+            else if (this.vyherce(0) == 1)
+            {
+                body[0] = body[0] + 2;
+                body[1] = body[1] + 0;
+            }
+            else
+            {
+                body[0] = body[0] + 0;
+                body[1] = body[1] + 2;
+            }
+
+            // 2. zapas
+            if (this.vyherce(1) == 3)
+            {
+                body[1] = body[1] + 1;
+                body[2] = body[2] + 1;
+            }
+            else if (this.vyherce(1) == 1)
+            {
+                body[1] = body[1] + 2;
+                body[2] = body[2] + 0;
+            }
+            else
+            {
+                body[1] = body[1] + 0;
+                body[2] = body[2] + 2;
+            }
+
+            // 3. zapas
+            if (this.vyherce(2) == 3)
+            {
+                body[2] = body[2] + 1;
+                body[0] = body[0] + 1;
+            }
+            else if (this.vyherce(1) == 1)
+            {
+                body[2] = body[2] + 2;
+                body[0] = body[0] + 0;
+            }
+            else
+            {
+                body[2] = body[2] + 0;
+                body[0] = body[0] + 2;
+            }
+
+            if (poradi == 0) {
+                if (body[0] >= body[1] && body[0] >= body[2])
+                {
+                    return 0;
+                }
+
+                else if (body[1] >= body[0] && body[1] >= body[2])
+                {
+                    return 1;
+                }
+
+
+                else if (body[2] >= body[0] && body[2] >= body[1])
+                {
+                    return 2;
+                }
+            }
+            else if(poradi == 1){
+                if ((body[0] >= body[1] && body[0] <= body[2]) || (body[0] >= body[2] && body[0] <= body[1]))
+                {
+                    return 0;
+                }
+
+                else if ((body[1] >= body[0] && body[1] <= body[2]) || (body[1] >= body[2] && body[1] <= body[0]))
+                {
+                    return 1;
+                }
+
+
+                else if ((body[2] >= body[0] && body[2] <= body[1]) || (body[2] >= body[1] && body[2] <= body[0]))
+                {
+                    return 2;
+                }
+            }
+
+
+        }
+
+
+        return -1;
     }
 
 

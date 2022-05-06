@@ -122,7 +122,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 125F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 139F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 143F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel4, 3, 3);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 3, 2);
             this.tableLayoutPanel1.Controls.Add(this.tabulkaHodnoceni6, 6, 3);
@@ -167,7 +167,7 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.Controls.Add(this.stav3, 0, 1);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(552, 177);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(550, 177);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 3;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 27F));
@@ -193,7 +193,7 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.Controls.Add(this.stav2, 0, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(552, 106);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(550, 106);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 27F));
@@ -219,13 +219,13 @@
             this.tabulkaHodnoceni6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tabulkaHodnoceni6.Controls.Add(this.hodnotit6, 0, 1);
             this.tabulkaHodnoceni6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabulkaHodnoceni6.Location = new System.Drawing.Point(1100, 177);
+            this.tabulkaHodnoceni6.Location = new System.Drawing.Point(1096, 177);
             this.tabulkaHodnoceni6.Name = "tabulkaHodnoceni6";
             this.tabulkaHodnoceni6.RowCount = 3;
             this.tabulkaHodnoceni6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 27F));
             this.tabulkaHodnoceni6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46F));
             this.tabulkaHodnoceni6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 27F));
-            this.tabulkaHodnoceni6.Size = new System.Drawing.Size(136, 64);
+            this.tabulkaHodnoceni6.Size = new System.Drawing.Size(140, 64);
             this.tabulkaHodnoceni6.TabIndex = 29;
             // 
             // hodnotit6
@@ -233,7 +233,7 @@
             this.hodnotit6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.hodnotit6.Location = new System.Drawing.Point(3, 20);
             this.hodnotit6.Name = "hodnotit6";
-            this.hodnotit6.Size = new System.Drawing.Size(130, 23);
+            this.hodnotit6.Size = new System.Drawing.Size(134, 23);
             this.hodnotit6.TabIndex = 27;
             this.hodnotit6.Text = "Hodnotit";
             this.hodnotit6.UseVisualStyleBackColor = true;
@@ -245,13 +245,13 @@
             this.tabulkaHodnoceni4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tabulkaHodnoceni4.Controls.Add(this.hodnotit4, 0, 1);
             this.tabulkaHodnoceni4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabulkaHodnoceni4.Location = new System.Drawing.Point(1100, 106);
+            this.tabulkaHodnoceni4.Location = new System.Drawing.Point(1096, 106);
             this.tabulkaHodnoceni4.Name = "tabulkaHodnoceni4";
             this.tabulkaHodnoceni4.RowCount = 3;
             this.tabulkaHodnoceni4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 27F));
             this.tabulkaHodnoceni4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46F));
             this.tabulkaHodnoceni4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 27F));
-            this.tabulkaHodnoceni4.Size = new System.Drawing.Size(136, 64);
+            this.tabulkaHodnoceni4.Size = new System.Drawing.Size(140, 64);
             this.tabulkaHodnoceni4.TabIndex = 29;
             // 
             // hodnotit4
@@ -259,7 +259,7 @@
             this.hodnotit4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.hodnotit4.Location = new System.Drawing.Point(3, 20);
             this.hodnotit4.Name = "hodnotit4";
-            this.hodnotit4.Size = new System.Drawing.Size(130, 23);
+            this.hodnotit4.Size = new System.Drawing.Size(134, 23);
             this.hodnotit4.TabIndex = 26;
             this.hodnotit4.Text = "Hodnotit";
             this.hodnotit4.UseVisualStyleBackColor = true;
@@ -271,13 +271,13 @@
             this.tabulkaHodnoceni2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tabulkaHodnoceni2.Controls.Add(this.hodnotit2, 0, 1);
             this.tabulkaHodnoceni2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabulkaHodnoceni2.Location = new System.Drawing.Point(1100, 35);
+            this.tabulkaHodnoceni2.Location = new System.Drawing.Point(1096, 35);
             this.tabulkaHodnoceni2.Name = "tabulkaHodnoceni2";
             this.tabulkaHodnoceni2.RowCount = 3;
             this.tabulkaHodnoceni2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 27F));
             this.tabulkaHodnoceni2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46F));
             this.tabulkaHodnoceni2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 27F));
-            this.tabulkaHodnoceni2.Size = new System.Drawing.Size(136, 64);
+            this.tabulkaHodnoceni2.Size = new System.Drawing.Size(140, 64);
             this.tabulkaHodnoceni2.TabIndex = 29;
             // 
             // hodnotit2
@@ -285,7 +285,7 @@
             this.hodnotit2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.hodnotit2.Location = new System.Drawing.Point(3, 20);
             this.hodnotit2.Name = "hodnotit2";
-            this.hodnotit2.Size = new System.Drawing.Size(130, 23);
+            this.hodnotit2.Size = new System.Drawing.Size(134, 23);
             this.hodnotit2.TabIndex = 25;
             this.hodnotit2.Text = "Hodnotit";
             this.hodnotit2.UseVisualStyleBackColor = true;
@@ -350,13 +350,13 @@
             this.tableLayout31.Controls.Add(this.body5, 0, 1);
             this.tableLayout31.Controls.Add(this.napomenuti5, 0, 0);
             this.tableLayout31.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayout31.Location = new System.Drawing.Point(341, 177);
+            this.tableLayout31.Location = new System.Drawing.Point(340, 177);
             this.tableLayout31.Name = "tableLayout31";
             this.tableLayout31.RowCount = 2;
             this.tableLayout31.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayout31.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 66.66667F));
             this.tableLayout31.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayout31.Size = new System.Drawing.Size(204, 64);
+            this.tableLayout31.Size = new System.Drawing.Size(203, 64);
             this.tableLayout31.TabIndex = 17;
             // 
             // body5
@@ -366,7 +366,7 @@
             this.body5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.body5.Location = new System.Drawing.Point(3, 21);
             this.body5.Name = "body5";
-            this.body5.Size = new System.Drawing.Size(198, 43);
+            this.body5.Size = new System.Drawing.Size(197, 43);
             this.body5.TabIndex = 18;
             this.body5.Text = "AB";
             this.body5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -378,7 +378,7 @@
             this.napomenuti5.ForeColor = System.Drawing.Color.Red;
             this.napomenuti5.Location = new System.Drawing.Point(3, 0);
             this.napomenuti5.Name = "napomenuti5";
-            this.napomenuti5.Size = new System.Drawing.Size(198, 21);
+            this.napomenuti5.Size = new System.Drawing.Size(197, 21);
             this.napomenuti5.TabIndex = 17;
             this.napomenuti5.Text = "▲▲";
             this.napomenuti5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -390,13 +390,13 @@
             this.tableLayout21.Controls.Add(this.body3, 0, 1);
             this.tableLayout21.Controls.Add(this.napomenuti3, 0, 0);
             this.tableLayout21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayout21.Location = new System.Drawing.Point(341, 106);
+            this.tableLayout21.Location = new System.Drawing.Point(340, 106);
             this.tableLayout21.Name = "tableLayout21";
             this.tableLayout21.RowCount = 2;
             this.tableLayout21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayout21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 66.66667F));
             this.tableLayout21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayout21.Size = new System.Drawing.Size(204, 64);
+            this.tableLayout21.Size = new System.Drawing.Size(203, 64);
             this.tableLayout21.TabIndex = 15;
             // 
             // body3
@@ -406,7 +406,7 @@
             this.body3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.body3.Location = new System.Drawing.Point(3, 21);
             this.body3.Name = "body3";
-            this.body3.Size = new System.Drawing.Size(198, 43);
+            this.body3.Size = new System.Drawing.Size(197, 43);
             this.body3.TabIndex = 17;
             this.body3.Text = "AB";
             this.body3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -418,7 +418,7 @@
             this.napomenuti3.ForeColor = System.Drawing.Color.Red;
             this.napomenuti3.Location = new System.Drawing.Point(3, 0);
             this.napomenuti3.Name = "napomenuti3";
-            this.napomenuti3.Size = new System.Drawing.Size(198, 21);
+            this.napomenuti3.Size = new System.Drawing.Size(197, 21);
             this.napomenuti3.TabIndex = 16;
             this.napomenuti3.Text = "▲▲";
             this.napomenuti3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -430,7 +430,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.label3.Location = new System.Drawing.Point(130, 1);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(204, 30);
+            this.label3.Size = new System.Drawing.Size(203, 30);
             this.label3.TabIndex = 3;
             this.label3.Text = "Jméno zápasníka";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -451,9 +451,9 @@
             this.label5.AutoSize = true;
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label5.Location = new System.Drawing.Point(341, 1);
+            this.label5.Location = new System.Drawing.Point(340, 1);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(204, 30);
+            this.label5.Size = new System.Drawing.Size(203, 30);
             this.label5.TabIndex = 5;
             this.label5.Text = "Výsledky";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -465,7 +465,7 @@
             this.jmeno11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.jmeno11.Location = new System.Drawing.Point(130, 32);
             this.jmeno11.Name = "jmeno11";
-            this.jmeno11.Size = new System.Drawing.Size(204, 70);
+            this.jmeno11.Size = new System.Drawing.Size(203, 70);
             this.jmeno11.TabIndex = 7;
             this.jmeno11.Text = "jmeno11";
             this.jmeno11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -477,7 +477,7 @@
             this.jmeno21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.jmeno21.Location = new System.Drawing.Point(130, 103);
             this.jmeno21.Name = "jmeno21";
-            this.jmeno21.Size = new System.Drawing.Size(204, 70);
+            this.jmeno21.Size = new System.Drawing.Size(203, 70);
             this.jmeno21.TabIndex = 8;
             this.jmeno21.Text = "jmeno21";
             this.jmeno21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -489,7 +489,7 @@
             this.jmeno31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.jmeno31.Location = new System.Drawing.Point(130, 174);
             this.jmeno31.Name = "jmeno31";
-            this.jmeno31.Size = new System.Drawing.Size(204, 70);
+            this.jmeno31.Size = new System.Drawing.Size(203, 70);
             this.jmeno31.TabIndex = 9;
             this.jmeno31.Text = "jmeno31";
             this.jmeno31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -501,12 +501,12 @@
             this.tableLayout11.Controls.Add(this.napomenuti1, 0, 0);
             this.tableLayout11.Controls.Add(this.body1, 0, 1);
             this.tableLayout11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayout11.Location = new System.Drawing.Point(341, 35);
+            this.tableLayout11.Location = new System.Drawing.Point(340, 35);
             this.tableLayout11.Name = "tableLayout11";
             this.tableLayout11.RowCount = 2;
             this.tableLayout11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayout11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 66.66667F));
-            this.tableLayout11.Size = new System.Drawing.Size(204, 64);
+            this.tableLayout11.Size = new System.Drawing.Size(203, 64);
             this.tableLayout11.TabIndex = 13;
             // 
             // napomenuti1
@@ -516,7 +516,7 @@
             this.napomenuti1.ForeColor = System.Drawing.Color.Red;
             this.napomenuti1.Location = new System.Drawing.Point(3, 0);
             this.napomenuti1.Name = "napomenuti1";
-            this.napomenuti1.Size = new System.Drawing.Size(198, 21);
+            this.napomenuti1.Size = new System.Drawing.Size(197, 21);
             this.napomenuti1.TabIndex = 15;
             this.napomenuti1.Text = "▲▲";
             this.napomenuti1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -528,7 +528,7 @@
             this.body1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.body1.Location = new System.Drawing.Point(3, 21);
             this.body1.Name = "body1";
-            this.body1.Size = new System.Drawing.Size(198, 43);
+            this.body1.Size = new System.Drawing.Size(197, 43);
             this.body1.TabIndex = 16;
             this.body1.Text = "AB";
             this.body1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -537,9 +537,9 @@
             // 
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label2.Location = new System.Drawing.Point(1100, 1);
+            this.label2.Location = new System.Drawing.Point(1096, 1);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(136, 30);
+            this.label2.Size = new System.Drawing.Size(140, 30);
             this.label2.TabIndex = 4;
             this.label2.Text = "Hodnocení";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -549,9 +549,9 @@
             this.label4.AutoSize = true;
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label4.Location = new System.Drawing.Point(889, 1);
+            this.label4.Location = new System.Drawing.Point(886, 1);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(204, 30);
+            this.label4.Size = new System.Drawing.Size(203, 30);
             this.label4.TabIndex = 3;
             this.label4.Text = "Jméno zápasníka";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -561,9 +561,9 @@
             this.jmeno12.AutoSize = true;
             this.jmeno12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.jmeno12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.jmeno12.Location = new System.Drawing.Point(889, 32);
+            this.jmeno12.Location = new System.Drawing.Point(886, 32);
             this.jmeno12.Name = "jmeno12";
-            this.jmeno12.Size = new System.Drawing.Size(204, 70);
+            this.jmeno12.Size = new System.Drawing.Size(203, 70);
             this.jmeno12.TabIndex = 12;
             this.jmeno12.Text = "jmeno12";
             this.jmeno12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -573,9 +573,9 @@
             this.jmeno22.AutoSize = true;
             this.jmeno22.Dock = System.Windows.Forms.DockStyle.Fill;
             this.jmeno22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.jmeno22.Location = new System.Drawing.Point(889, 103);
+            this.jmeno22.Location = new System.Drawing.Point(886, 103);
             this.jmeno22.Name = "jmeno22";
-            this.jmeno22.Size = new System.Drawing.Size(204, 70);
+            this.jmeno22.Size = new System.Drawing.Size(203, 70);
             this.jmeno22.TabIndex = 11;
             this.jmeno22.Text = "jmeno22";
             this.jmeno22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -586,9 +586,9 @@
             this.jmeno32.BackColor = System.Drawing.SystemColors.Control;
             this.jmeno32.Dock = System.Windows.Forms.DockStyle.Fill;
             this.jmeno32.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.jmeno32.Location = new System.Drawing.Point(889, 174);
+            this.jmeno32.Location = new System.Drawing.Point(886, 174);
             this.jmeno32.Name = "jmeno32";
-            this.jmeno32.Size = new System.Drawing.Size(204, 70);
+            this.jmeno32.Size = new System.Drawing.Size(203, 70);
             this.jmeno32.TabIndex = 10;
             this.jmeno32.Text = "jmeno32";
             this.jmeno32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -600,12 +600,12 @@
             this.tableLayout32.Controls.Add(this.body6, 0, 1);
             this.tableLayout32.Controls.Add(this.napomenuti6, 0, 0);
             this.tableLayout32.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayout32.Location = new System.Drawing.Point(678, 177);
+            this.tableLayout32.Location = new System.Drawing.Point(676, 177);
             this.tableLayout32.Name = "tableLayout32";
             this.tableLayout32.RowCount = 2;
             this.tableLayout32.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayout32.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 66.66667F));
-            this.tableLayout32.Size = new System.Drawing.Size(204, 64);
+            this.tableLayout32.Size = new System.Drawing.Size(203, 64);
             this.tableLayout32.TabIndex = 18;
             // 
             // body6
@@ -615,7 +615,7 @@
             this.body6.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.body6.Location = new System.Drawing.Point(3, 21);
             this.body6.Name = "body6";
-            this.body6.Size = new System.Drawing.Size(198, 43);
+            this.body6.Size = new System.Drawing.Size(197, 43);
             this.body6.TabIndex = 18;
             this.body6.Text = "AB";
             this.body6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -627,7 +627,7 @@
             this.napomenuti6.ForeColor = System.Drawing.Color.Red;
             this.napomenuti6.Location = new System.Drawing.Point(3, 0);
             this.napomenuti6.Name = "napomenuti6";
-            this.napomenuti6.Size = new System.Drawing.Size(198, 21);
+            this.napomenuti6.Size = new System.Drawing.Size(197, 21);
             this.napomenuti6.TabIndex = 18;
             this.napomenuti6.Text = "▲▲";
             this.napomenuti6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -639,13 +639,13 @@
             this.tableLayout22.Controls.Add(this.body4, 0, 1);
             this.tableLayout22.Controls.Add(this.napomenuti4, 0, 0);
             this.tableLayout22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayout22.Location = new System.Drawing.Point(678, 106);
+            this.tableLayout22.Location = new System.Drawing.Point(676, 106);
             this.tableLayout22.Name = "tableLayout22";
             this.tableLayout22.RowCount = 2;
             this.tableLayout22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayout22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 66.66667F));
             this.tableLayout22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayout22.Size = new System.Drawing.Size(204, 64);
+            this.tableLayout22.Size = new System.Drawing.Size(203, 64);
             this.tableLayout22.TabIndex = 16;
             // 
             // body4
@@ -655,7 +655,7 @@
             this.body4.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.body4.Location = new System.Drawing.Point(3, 21);
             this.body4.Name = "body4";
-            this.body4.Size = new System.Drawing.Size(198, 43);
+            this.body4.Size = new System.Drawing.Size(197, 43);
             this.body4.TabIndex = 18;
             this.body4.Text = "AB";
             this.body4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -667,7 +667,7 @@
             this.napomenuti4.ForeColor = System.Drawing.Color.Red;
             this.napomenuti4.Location = new System.Drawing.Point(3, 0);
             this.napomenuti4.Name = "napomenuti4";
-            this.napomenuti4.Size = new System.Drawing.Size(198, 21);
+            this.napomenuti4.Size = new System.Drawing.Size(197, 21);
             this.napomenuti4.TabIndex = 16;
             this.napomenuti4.Text = "▲▲";
             this.napomenuti4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -679,12 +679,12 @@
             this.tableLayout12.Controls.Add(this.body2, 0, 1);
             this.tableLayout12.Controls.Add(this.napomenuti2, 0, 0);
             this.tableLayout12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayout12.Location = new System.Drawing.Point(678, 35);
+            this.tableLayout12.Location = new System.Drawing.Point(676, 35);
             this.tableLayout12.Name = "tableLayout12";
             this.tableLayout12.RowCount = 2;
             this.tableLayout12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayout12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 66.66667F));
-            this.tableLayout12.Size = new System.Drawing.Size(204, 64);
+            this.tableLayout12.Size = new System.Drawing.Size(203, 64);
             this.tableLayout12.TabIndex = 14;
             // 
             // body2
@@ -694,7 +694,7 @@
             this.body2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.body2.Location = new System.Drawing.Point(3, 21);
             this.body2.Name = "body2";
-            this.body2.Size = new System.Drawing.Size(198, 43);
+            this.body2.Size = new System.Drawing.Size(197, 43);
             this.body2.TabIndex = 17;
             this.body2.Text = "AB";
             this.body2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -706,7 +706,7 @@
             this.napomenuti2.ForeColor = System.Drawing.Color.Red;
             this.napomenuti2.Location = new System.Drawing.Point(3, 0);
             this.napomenuti2.Name = "napomenuti2";
-            this.napomenuti2.Size = new System.Drawing.Size(198, 21);
+            this.napomenuti2.Size = new System.Drawing.Size(197, 21);
             this.napomenuti2.TabIndex = 16;
             this.napomenuti2.Text = "▲▲";
             this.napomenuti2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -716,9 +716,9 @@
             this.label6.AutoSize = true;
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label6.Location = new System.Drawing.Point(678, 1);
+            this.label6.Location = new System.Drawing.Point(676, 1);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(204, 30);
+            this.label6.Size = new System.Drawing.Size(203, 30);
             this.label6.TabIndex = 6;
             this.label6.Text = "Výsledky";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -727,7 +727,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label7.Location = new System.Drawing.Point(552, 1);
+            this.label7.Location = new System.Drawing.Point(550, 1);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(119, 30);
             this.label7.TabIndex = 19;
@@ -766,7 +766,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Controls.Add(this.stav1, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(552, 35);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(550, 35);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 27F));
